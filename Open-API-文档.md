@@ -1,6 +1,6 @@
-[认证信息](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/signature)
+[认证信息](https://gitlab.com/gizmotech/Doc/wikis/signature)
 
-[获取模型列表](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/search_cars)
+[获取模型列表](https://gitlab.com/gizmotech/Doc/wikis/content%20lists)
 
 [编辑模型](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B)
 
