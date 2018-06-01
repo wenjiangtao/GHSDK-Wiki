@@ -2,10 +2,10 @@
 
 [获取模型列表](https://gitlab.com/gizmotech/Doc/wikis/content%20lists)
 
-[编辑模型](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B)
+[编辑模型](https://gitlab.com/gizmotech/Doc/wikis/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B)
 
-[嵌入模型](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B)
+[嵌入模型](https://gitlab.com/gizmotech/Doc/wikis/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B)
 
-[获取配置信息](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/get_aggregate_info)
+[获取配置信息](https://gitlab.com/gizmotech/Doc/wikis/%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF)
 
-[常见返回对象结构](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/structs)
+[常见返回对象结构](https://gitlab.com/gizmotech/Doc/wikis/structs)
