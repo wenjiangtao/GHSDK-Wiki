@@ -2,20 +2,20 @@
 
 1. 在请求的url带上认证信息的query
 2. api_secret 申请API之后后台生成，请妥善保管，不要泄露。
-3. 认证信息包括三个部分：email,timestamp,signature
-  - email:申请API时的用户邮箱
+3. 认证信息包括三个部分：`accesskey`,`timestamp`,`signature`
+  - accesskey:用户的accesskey
   - timestamp:10位的时间戳
-  - signature:使用email,api_secret和timestamp生成的字符串，然后进行`sha1`签名，最后使用`base64`进行编码
+  - signature:使用accesskey,api_secret和timestamp生成的字符串，然后进行`sha1`签名，最后使用`base64`进行编码
 
 ### python例子
 ```python
-email='example@example.com'
+accesskey='accesskey'
 api_secret='api_secret'
 timestamp = int(time.time())
 signature = base64.b64encode(sha1(email + api_secret + str(timestamp)).hexdigest())
 
 query = {
-    'email': email,
+    'accesskey': accesskey,
     'timestamp': timestamp,
     'signature': signature
 }
