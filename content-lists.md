@@ -1,8 +1,8 @@
 ## 获取模型列表
-需要带上认证信息[(如何认证)](http://git.gizmotech.cn/Gizmo/gizmohub/wikis/signature)
+需要带上认证信息[(如何认证)](https://gitlab.com/gizmotech/Doc/wikis/signature)
 
 ### URL
-`GET /api/v2/contents/search?name=123&limit=20&offset=0`
+`GET /api/v2/contents`
 
 -----
 
@@ -33,7 +33,7 @@ total   | int |总数 |
 
 ### Example
 ```python
-GET /api/v2/contents/search?name=奔驰&limit=20&offset=0
+GET /api/v2/contents?name=奔驰&limit=20&offset=0
 
 返回：
 {
@@ -41,6 +41,7 @@ GET /api/v2/contents/search?name=奔驰&limit=20&offset=0
         {
             "created_at": 1522218398000, 
             "description": "asdfasdf", 
+            "category": 1008
             "name": "奔驰C200L", 
             "status": 1, 
             "thumbnail_url": "gizmohub.oss-aliyun.com/t123/m123/c123/thumbnails/addm8q4.png", 
