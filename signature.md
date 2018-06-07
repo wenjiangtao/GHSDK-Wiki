@@ -19,7 +19,7 @@ query = {
     'timestamp': timestamp,
     'signature': signature
 }
-request_url = 'https://gizmohub.cn/api/v2/contents?{0}'
+request_url = 'https://gizmohub.com/api/v2/contents?{0}'
 response = requests.get(request_url.format(urlencode(query))
 ```
 
