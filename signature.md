@@ -12,7 +12,7 @@
 accesskey='accesskey'
 api_secret='api_secret'
 timestamp = int(time.time())
-signature = base64.b64encode(sha1(email + api_secret + str(timestamp)).hexdigest())
+signature = base64.b64encode(sha1(accesskey + api_secret + str(timestamp)).hexdigest())
 
 query = {
     'accesskey': accesskey,
