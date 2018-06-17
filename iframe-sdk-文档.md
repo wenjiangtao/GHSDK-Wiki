@@ -22,53 +22,53 @@ var gh = new GizmohubSDK(iframe);
     gh.getOptions(console.log);
 
     {
-    "annotations": [ true, false ],
-    "moving": [ true, false ],
-    "headlight": [ true, false ],
-    "size": [ true, false ],
-    "wheel": [
-        {
-        "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b",
-        "name": "默认",
-        "sign": {
-            "accesskey": "string",
-            "timestamp": "number",
-            "signature": "string"
-        }
-        },
-        {
-        "uid": "f409ba97cf02c2e24721556e2342d9c747e3859f",
-        "name": "lunzi",
-        "sign": {
-            "accesskey": "string",
-            "timestamp": "number",
-            "signature": "string"
-        }
-        }
-    ],
-    "interior": [
-        { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
-    ],
-    "exterior": [
-        { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
-    ],
-    "skybox": [
-        { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
-        { "uid": "599a8dc00af00e2ce3d1bb59fa774eda922e6675", "name": "停机坪" },
-        { "uid": "4ca6583062661f40f16aad364bbc8d2699cb4933", "name": "废弃船厂" }
-    ],
-    "differ": {
-        "target": [ "uid", null ],
-        "merge": [ true, false ],
-        "measure": [ true, false ],
+        "annotations": [ true, false ],
+        "moving": [ true, false ],
+        "headlight": [ true, false ],
         "size": [ true, false ],
-        "box": [ true, false ],
-        "sign": {
-        "accesskey": "string",
-        "timestamp": "number",
-        "signature": "string"
+        "wheel": [
+            {
+                "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b",
+                "name": "默认",
+                "sign": {
+                    "accesskey": "string",
+                    "timestamp": "number",
+                    "signature": "string"
+                }
+            },
+            {
+                "uid": "f409ba97cf02c2e24721556e2342d9c747e3859f",
+                "name": "lunzi",
+                "sign": {
+                    "accesskey": "string",
+                    "timestamp": "number",
+                    "signature": "string"
+                }
+            }
+        ],
+        "interior": [
+            { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
+        ],
+        "exterior": [
+            { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
+        ],
+        "skybox": [
+            { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
+            { "uid": "599a8dc00af00e2ce3d1bb59fa774eda922e6675", "name": "停机坪" },
+            { "uid": "4ca6583062661f40f16aad364bbc8d2699cb4933", "name": "废弃船厂" }
+        ],
+        "differ": {
+            "target": [ "uid", null ],
+            "merge": [ true, false ],
+            "measure": [ true, false ],
+            "size": [ true, false ],
+            "box": [ true, false ],
+            "sign": {
+            "accesskey": "string",
+            "timestamp": "number",
+            "signature": "string"
+            }
         }
-    }
     }
     ```
 
@@ -118,12 +118,31 @@ var gh = new GizmohubSDK(iframe);
     gh.setState({
         moving: true, // 进入行使状态
         annotations: true, // 显示热点
+        headlight: true, // 显示车灯
+        size: true, // 显示尺寸
         differ: {
             target: "2fedc563722c13790a7cea52b6a8fcaaac5ce96e", // 与该 uid 的车进行对比
             merge: false, // 两车不融合
             box: true, // 显示包围盒
+            sign: {
+                accesskey: "string",
+                timestamp": "number",
+                signature": "string"
+            }
+
         },
-        skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" } // 切换天空盒
+        wheel: {
+            uid: "d1fac90b8415a7bd1500d8e53501c032575f2e1b", // 切换车轮的uid
+            name: "默认",
+            sign: {
+                "accesskey": "string",
+                "timestamp": "number",
+                "signature": "string"
+            }
+        }
+        skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
+        interior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换内饰的uid
+        exterior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" } // 更换外观的uid
     })
     ```
 
