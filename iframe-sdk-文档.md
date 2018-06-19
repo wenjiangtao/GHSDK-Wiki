@@ -63,10 +63,12 @@ var gh = new GizmohubSDK(iframe);
             "measure": [ true, false ],
             "size": [ true, false ],
             "box": [ true, false ],
+            "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+            "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
             "sign": {
-            "accesskey": "string",
-            "timestamp": "number",
-            "signature": "string"
+                "accesskey": "string",
+                "timestamp": "number",
+                "signature": "string"
             }
         }
     }
@@ -86,6 +88,8 @@ var gh = new GizmohubSDK(iframe);
         - `mersure` 是否开启测量尺寸差异
         - `size` 是否显示对比车辆的尺寸
         - `box` 是否显示车辆的包围盒
+        - `exterior` 替换对比车辆的外观
+        - `interior` 替换对比车辆的内饰
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -102,7 +106,9 @@ var gh = new GizmohubSDK(iframe);
         "target": null,
         "merge": false,
         "measure": false,
-        "box": false
+        "box": false,
+        "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+        "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
     },
     "wheel": { "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b", "name": "默认" },
     "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
