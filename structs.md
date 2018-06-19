@@ -3,7 +3,7 @@
 --------------|-----:| ----:|
 uid   | string |标识uid |
 name   | string |名字 |
-category   | int |类别,1是内饰，2是外饰 |
+category   | int |类别,1是内饰，2是外饰,0是默认 |
 
 ---------------
 ### carView
