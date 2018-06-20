@@ -26,6 +26,11 @@ var gh = new GizmohubSDK(iframe);
         "moving": [ true, false ],
         "headlight": [ true, false ],
         "size": [ true, false ],
+        "visible": [ true, false ],
+        "rotate:" {
+            "enabled": [ true, false ],
+            "speed": "number"
+        },
         "wheel": [
             {
                 "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b",
@@ -63,6 +68,7 @@ var gh = new GizmohubSDK(iframe);
             "measure": [ true, false ],
             "size": [ true, false ],
             "box": [ true, false ],
+            "visible": [ true, false ],
             "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
             "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
             "sign": {
@@ -82,6 +88,10 @@ var gh = new GizmohubSDK(iframe);
     - `interior` 可以切换的内饰列表
     - `exterior` 可以切换的外观列表
     - `skybox` 可以切换的天空盒列表
+    - `visible` 是否显示一车辆
+    - `rotate` 旋转设置
+        - `enabled`: 是否开启旋转
+        - `speed`: 设置旋转速度 默认为4
     - `differ` 两车对比，对比时需要传如签名信息
         - `target` 对比车辆的 `uid`，`null` 表示取消对比状态
         - `merge` 是否开启两车融合
@@ -102,11 +112,17 @@ var gh = new GizmohubSDK(iframe);
     "annotations": true,
     "headlight": true,
     "size": true,
+    "visible": true,
+    "rotate:" {
+        "enabled": false,
+        "speed": 4
+    },
     "differ": {
         "target": null,
         "merge": false,
         "measure": false,
         "box": false,
+        "visible": true,
         "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
     },
@@ -126,6 +142,11 @@ var gh = new GizmohubSDK(iframe);
         annotations: true, // 显示热点
         headlight: true, // 显示车灯
         size: true, // 显示尺寸
+        visible: true, //显示一车辆
+        rotate: {
+            enabled: true, // 开启旋转
+            speed: 4 // 旋转速度为4
+        },
         differ: {
             target: "2fedc563722c13790a7cea52b6a8fcaaac5ce96e", // 与该 uid 的车进行对比
             merge: false, // 两车不融合
@@ -165,3 +186,19 @@ var gh = new GizmohubSDK(iframe);
   默认情况下，app 在预加载资源完成后会自动启动。如果需要手动启动 app，需要在访问
   页面的路径中添加查询字符串：`autoStart=false`。这时候，可以通过监听
   `gizmohub:postInigialize` 事件，在回调函数中调用 `gh.start()` 来启动 app。
+import hex from 'crypto-js/enc-hex';
+import sha1 from 'crypto-js/sha1';
+
+const accesskey = API_ACCESS_KEY;
+const secretkey = API_SECRET_KEY;
+
+export function genSign() {
+    const timestamp = Date.now() / 1000 | 0;
+    const signature = btoa(sha1(accesskey + secretkey + timestamp).toString(hex));
+
+    return {
+        accesskey,
+        timestamp,
+        signature
+    };
+}
