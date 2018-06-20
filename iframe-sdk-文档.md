@@ -94,6 +94,7 @@ var gh = new GizmohubSDK(iframe);
         - `speed`: 设置旋转速度 默认为4
     - `differ` 两车对比，对比时需要传如签名信息
         - `target` 对比车辆的 `uid`，`null` 表示取消对比状态
+        - `visible` 是否显示对比车辆，默认为显示
         - `merge` 是否开启两车融合
         - `mersure` 是否开启测量尺寸差异
         - `size` 是否显示对比车辆的尺寸
