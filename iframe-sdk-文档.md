@@ -180,7 +180,7 @@ var gh = new GizmohubSDK(iframe);
   - `gizmohub:postInitialize` app 准备启动
   - `gizmohub:start` app 启动
   - `gizmohub:model:<uid>:progress` 模型加载进度，`<uid>` 替换成真实的 `uid`
-
+  - `gizmohub:annotation:dialog` 监听注释弹窗事件，返回 bool
 
 - `gh.start()` 手动启动 app。
 
