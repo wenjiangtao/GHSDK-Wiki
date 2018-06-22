@@ -68,6 +68,7 @@ var gh = new GizmohubSDK(iframe);
             "measure": [ true, false ],
             "size": [ true, false ],
             "box": [ true, false ],
+            "distance": "number",
             "visible": [ true, false ],
             "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
             "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
@@ -91,13 +92,14 @@ var gh = new GizmohubSDK(iframe);
     - `visible` 是否显示一车辆
     - `rotate` 旋转设置
         - `enabled`: 是否开启旋转
-        - `speed`: 设置旋转速度 默认为4
+        - `speed`: 设置旋转速度，默认为4
     - `differ` 两车对比，对比时需要传如签名信息
         - `target` 对比车辆的 `uid`，`null` 表示取消对比状态
         - `visible` 是否显示对比车辆，默认为显示
         - `merge` 是否开启两车融合
         - `mersure` 是否开启测量尺寸差异
         - `size` 是否显示对比车辆的尺寸
+        - `distance` 两车之间的车距，默认为4.4
         - `box` 是否显示车辆的包围盒
         - `exterior` 替换对比车辆的外观
         - `interior` 替换对比车辆的内饰
@@ -124,6 +126,7 @@ var gh = new GizmohubSDK(iframe);
         "measure": false,
         "box": false,
         "visible": true,
+        "distance": 4.4,
         "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
     },
@@ -152,6 +155,9 @@ var gh = new GizmohubSDK(iframe);
             target: "2fedc563722c13790a7cea52b6a8fcaaac5ce96e", // 与该 uid 的车进行对比
             merge: false, // 两车不融合
             box: true, // 显示包围盒
+            measure: false,
+            visible: true,
+            distance: 4.4,
             sign: {
                 accesskey: "string",
                 timestamp": "number",
