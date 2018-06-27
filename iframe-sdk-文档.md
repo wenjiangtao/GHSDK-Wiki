@@ -68,6 +68,7 @@ var gh = new GizmohubSDK(iframe);
             "measure": [ true, false ],
             "size": [ true, false ],
             "box": [ true, false ],
+            "headlight": [ true, false ],
             "distance": "number",
             "visible": [ true, false ],
             "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
@@ -99,8 +100,9 @@ var gh = new GizmohubSDK(iframe);
         - `merge` 是否开启两车融合
         - `mersure` 是否开启测量尺寸差异
         - `size` 是否显示对比车辆的尺寸
-        - `distance` 两车之间的车距，默认为4.4
         - `box` 是否显示车辆的包围盒
+        - `headlight` 是否显示对比车辆的车灯
+        - `distance` 两车之间的车距，默认为4.4
         - `exterior` 替换对比车辆的外观
         - `interior` 替换对比车辆的内饰
 
@@ -125,6 +127,7 @@ var gh = new GizmohubSDK(iframe);
         "merge": false,
         "measure": false,
         "box": false,
+        "headlight": false,
         "visible": true,
         "distance": 4.4,
         "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
