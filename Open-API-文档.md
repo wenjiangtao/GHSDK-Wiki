@@ -6,6 +6,8 @@
 
 [嵌入模型](https://gitlab.com/gizmotech/Doc/wikis/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B)
 
-[获取配置信息](https://gitlab.com/gizmotech/Doc/wikis/%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF)
+[获取单个模型配置信息](https://gitlab.com/gizmotech/Doc/wikis/%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF)
+
+[获取单个模型基本信息](https://gitlab.com/gizmotech/Doc/wikis/content_info)
 
 [常见返回对象结构](https://gitlab.com/gizmotech/Doc/wikis/structs)
