@@ -78,6 +78,10 @@ var gh = new GizmohubSDK(iframe);
                 "timestamp": "number",
                 "signature": "string"
             }
+        },
+        "doors": {
+            "buttons": [ [ true, false ], [ true, false ], [ true, false ], [ true, false ] ],
+            "status": [ [ true, false ], [ true, false ], [ true, false ], [ true, false ] ],
         }
     }
     ```
@@ -92,8 +96,8 @@ var gh = new GizmohubSDK(iframe);
     - `skybox` 可以切换的天空盒列表
     - `visible` 是否显示一车辆
     - `rotate` 旋转设置
-        - `enabled`: 是否开启旋转
-        - `speed`: 设置旋转速度，默认为4
+        - `enabled` 是否开启旋转
+        - `speed` 设置旋转速度，默认为4
     - `differ` 两车对比，对比时需要传如签名信息
         - `target` 对比车辆的 `uid`，`null` 表示取消对比状态
         - `visible` 是否显示对比车辆，默认为显示
@@ -105,6 +109,9 @@ var gh = new GizmohubSDK(iframe);
         - `distance` 两车之间的车距，默认为4.4
         - `exterior` 替换对比车辆的外观
         - `interior` 替换对比车辆的内饰
+    - `doors`
+        - `buttons` 是否显示车门按钮，默认都为隐藏，值为[false, false, false, false]， 顺序： 左前、右前、左后、右后
+        - `status` 是否开关车门，默认都为关闭，值为[false, false, false, false]， 顺序： 左前、右前、左后、右后
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -113,30 +120,34 @@ var gh = new GizmohubSDK(iframe);
     gh.getState(console.log);
 
     {
-    "moving": false,
-    "annotations": true,
-    "headlight": true,
-    "size": true,
-    "visible": true,
-    "rotate:" {
-        "enabled": false,
-        "speed": 4
-    },
-    "differ": {
-        "target": null,
-        "merge": false,
-        "measure": false,
-        "box": false,
-        "headlight": false,
+        "moving": false,
+        "annotations": true,
+        "headlight": true,
+        "size": true,
         "visible": true,
-        "distance": 4.4,
+        "rotate:" {
+            "enabled": false,
+            "speed": 4
+        },
+        "differ": {
+            "target": null,
+            "merge": false,
+            "measure": false,
+            "box": false,
+            "headlight": false,
+            "visible": true,
+            "distance": 4.4,
+            "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+            "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
+        },
+        "wheel": { "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b", "name": "默认" },
         "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-        "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
-    },
-    "wheel": { "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b", "name": "默认" },
-    "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-    "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-    "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" }
+        "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+        "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
+        "doors": {
+            "buttons": [false, false, false, false],
+            "status": [false, false, false, false],
+        }
     }
     ```
 
@@ -179,7 +190,11 @@ var gh = new GizmohubSDK(iframe);
         }
         skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
         interior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换内饰的uid
-        exterior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" } // 更换外观的uid
+        exterior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
+        doors: {
+            buttons: [true, true, true, true], // 显示车门按钮
+            status: [true, true, true, true], // 开车门
+        }
     })
     ```
 
