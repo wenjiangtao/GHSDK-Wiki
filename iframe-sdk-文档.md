@@ -211,19 +211,22 @@ var gh = new GizmohubSDK(iframe);
   默认情况下，app 在预加载资源完成后会自动启动。如果需要手动启动 app，需要在访问
   页面的路径中添加查询字符串：`autoStart=false`。这时候，可以通过监听
   `gizmohub:postInigialize` 事件，在回调函数中调用 `gh.start()` 来启动 app。
-import hex from 'crypto-js/enc-hex';
-import sha1 from 'crypto-js/sha1';
 
-const accesskey = API_ACCESS_KEY;
-const secretkey = API_SECRET_KEY;
+```
+    import hex from 'crypto-js/enc-hex';
+    import sha1 from 'crypto-js/sha1';
 
-export function genSign() {
-    const timestamp = Date.now() / 1000 | 0;
-    const signature = btoa(sha1(accesskey + secretkey + timestamp).toString(hex));
+    const accesskey = API_ACCESS_KEY;
+    const secretkey = API_SECRET_KEY;
 
-    return {
-        accesskey,
-        timestamp,
-        signature
-    };
-}
+    export function genSign() {
+        const timestamp = Date.now() / 1000 | 0;
+        const signature = btoa(sha1(accesskey + secretkey + timestamp).toString(hex));
+
+        return {
+            accesskey,
+            timestamp,
+            signature
+        };
+    }
+```
