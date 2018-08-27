@@ -23,6 +23,7 @@ var gh = new GizmohubSDK(iframe);
 
     {
         "annotations": [ true, false ],
+        "explode": [ true, false ],
         "size": [ true, false ],
         "visible": [ true, false ],
         "rotate:" {
@@ -60,6 +61,7 @@ var gh = new GizmohubSDK(iframe);
     ```
 
     - `annotations` 是否显示热点
+    - `explode` 是否进行模型拆解
     - `size` 是否显示模型尺寸
     - `interior` 可以切换的内饰列表
     - `exterior` 可以切换的外观列表
@@ -88,6 +90,7 @@ var gh = new GizmohubSDK(iframe);
     {
         "annotations": true,
         "size": true,
+        "explode": false,
         "visible": true,
         "rotate:" {
             "enabled": false,
@@ -116,6 +119,7 @@ var gh = new GizmohubSDK(iframe);
     ```js
     gh.setState({
         annotations: true, // 显示热点
+        explode: true, // 拆解模型
         size: true, // 显示尺寸
         visible: true, //显示一模型
         rotate: {
