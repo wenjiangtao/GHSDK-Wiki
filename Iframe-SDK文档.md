@@ -46,7 +46,7 @@ var gh = new GizmohubSDK(iframe);
     - `size` 是否显示模型尺寸
     - `material_sets` 可以切换的外观列表
     - `skybox` 可以切换的天空盒列表
-    - `visible` 是否显示一车辆
+    - `visible` 是否显示模型
     - `rotate` 旋转设置
         - `enabled` 是否开启旋转
         - `speed` 设置旋转速度，默认为
