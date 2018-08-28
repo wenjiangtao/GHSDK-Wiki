@@ -30,10 +30,7 @@ var gh = new GizmohubSDK(iframe);
             "enabled": [ true, false ],
             "speed": "number"
         },
-        "interior": [
-            { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
-        ],
-        "exterior": [
+        "material_sets": [
             { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
         ],
         "skybox": [
@@ -49,8 +46,7 @@ var gh = new GizmohubSDK(iframe);
             "box": [ true, false ],
             "distance": "number",
             "visible": [ true, false ],
-            "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-            "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+            "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
             "sign": {
                 "accesskey": "string",
                 "timestamp": "number",
@@ -63,8 +59,7 @@ var gh = new GizmohubSDK(iframe);
     - `annotations` 是否显示热点
     - `explode` 是否进行模型拆解
     - `size` 是否显示模型尺寸
-    - `interior` 可以切换的内饰列表
-    - `exterior` 可以切换的外观列表
+    - `material_sets` 可以切换的外观列表
     - `skybox` 可以切换的天空盒列表
     - `visible` 是否显示一车辆
     - `rotate` 旋转设置
@@ -78,8 +73,7 @@ var gh = new GizmohubSDK(iframe);
         - `size` 是否显示对比模型的尺寸
         - `box` 是否显示模型的包围盒
         - `distance` 两模型之间的对比距离，默认为4.4
-        - `exterior` 替换对比模型的外观
-        - `interior` 替换对比模型的内饰
+        - `material_sets` 替换对比模型的外观
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -104,11 +98,9 @@ var gh = new GizmohubSDK(iframe);
             "headlight": false,
             "visible": true,
             "distance": 4.4,
-            "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-            "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
+            "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
         },
-        "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-        "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+        "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
     }
     ```
@@ -141,8 +133,7 @@ var gh = new GizmohubSDK(iframe);
 
         },
         skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
-        interior: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换内饰的uid
-        exterior: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
+        material_sets: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
     })
     ```
 
