@@ -79,7 +79,7 @@ var gh = new GizmohubSDK(iframe);
         annotations: true, // 显示热点
         explode: true, // 拆解模型
         size: true, // 显示尺寸
-        visible: true, //显示一模型
+        visible: true, //显示模型
         rotate: {
             enabled: true, // 开启旋转
             speed: 4 // 旋转速度为4
