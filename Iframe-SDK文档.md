@@ -37,22 +37,7 @@ var gh = new GizmohubSDK(iframe);
             { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
             { "uid": "599a8dc00af00e2ce3d1bb59fa774eda922e6675", "name": "停机坪" },
             { "uid": "4ca6583062661f40f16aad364bbc8d2699cb4933", "name": "废弃船厂" }
-        ],
-        "differ": {
-            "target": [ "uid", null ],
-            "merge": [ true, false ],
-            "measure": [ true, false ],
-            "size": [ true, false ],
-            "box": [ true, false ],
-            "distance": "number",
-            "visible": [ true, false ],
-            "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-            "sign": {
-                "accesskey": "string",
-                "timestamp": "number",
-                "signature": "string"
-            }
-        }
+        ]
     }
     ```
 
@@ -64,16 +49,7 @@ var gh = new GizmohubSDK(iframe);
     - `visible` 是否显示一车辆
     - `rotate` 旋转设置
         - `enabled` 是否开启旋转
-        - `speed` 设置旋转速度，默认为4
-    - `differ` 两模型对比，对比时需要传如签名信息
-        - `target` 对比模型的 `uid`，`null` 表示取消对比状态
-        - `visible` 是否显示对比模型，默认为显示
-        - `merge` 是否开启两模型融合
-        - `mersure` 是否开启测量尺寸差异
-        - `size` 是否显示对比模型的尺寸
-        - `box` 是否显示模型的包围盒
-        - `distance` 两模型之间的对比距离，默认为4.4
-        - `material_sets` 替换对比模型的外观
+        - `speed` 设置旋转速度，默认为
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -89,16 +65,6 @@ var gh = new GizmohubSDK(iframe);
         "rotate:" {
             "enabled": false,
             "speed": 4
-        },
-        "differ": {
-            "target": null,
-            "merge": false,
-            "measure": false,
-            "box": false,
-            "headlight": false,
-            "visible": true,
-            "distance": 4.4,
-            "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
         },
         "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
@@ -117,20 +83,6 @@ var gh = new GizmohubSDK(iframe);
         rotate: {
             enabled: true, // 开启旋转
             speed: 4 // 旋转速度为4
-        },
-        differ: {
-            target: "2fedc563722c13790a7cea52b6a8fcaaac5ce96e", // 与该 uid 的模型进行对比
-            merge: false, // 两模型不融合
-            box: true, // 显示包围盒
-            measure: false,
-            visible: true,
-            distance: 4.4,
-            sign: {
-                accesskey: "string",
-                timestamp: "number",
-                signature: "string"
-            }
-
         },
         skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
         material_sets: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
