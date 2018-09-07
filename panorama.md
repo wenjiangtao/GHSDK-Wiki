@@ -2,7 +2,7 @@
 需要带上认证信息[(如何认证)](https://gitlab.com/gizmotech/Doc/wikis/signature)
 
 ### URL
-`GET /api/v2/contents/<string:panorama_uid>/panoramas`
+`GET /api/v2/contents/<string:content_uid>/panoramas`
 
 -----
 
