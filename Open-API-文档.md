@@ -10,4 +10,6 @@
 
 [获取单个模型基本信息](https://gitlab.com/gizmotech/Doc/wikis/content_info)
 
+[获取单个模型的所有全景图](https://gitlab.com/gizmotech/Doc/wikis/panorama)
+
 [常见返回对象结构](https://gitlab.com/gizmotech/Doc/wikis/structs)
