@@ -82,7 +82,11 @@ var gh = new GizmohubSDK(iframe);
         "doors": {
             "buttons": [ [ true, false ], [ true, false ], [ true, false ], [ true, false ] ],
             "status": [ [ true, false ], [ true, false ], [ true, false ], [ true, false ] ],
-        }
+        },
+        "panorama": [
+            [{ "uid": "xxxxxxxxxxxxx", "name": "xxx" }],
+            null
+        ]
     }
     ```
 
@@ -112,6 +116,7 @@ var gh = new GizmohubSDK(iframe);
     - `doors`
         - `buttons` 是否显示车门按钮，默认都为隐藏，值为[false, false, false, false]， 顺序： 左前、右前、左后、右后
         - `status` 是否开关车门，默认都为关闭，值为[false, false, false, false]， 顺序： 左前、右前、左后、右后
+    - `panorama` 可以切换全景图列表
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -147,7 +152,8 @@ var gh = new GizmohubSDK(iframe);
         "doors": {
             "buttons": [false, false, false, false],
             "status": [false, false, false, false],
-        }
+        },
+        "panorama": { "uid": "xxxxxxxxxxxxx", "name": "xxx" }
     }
     ```
 
@@ -194,17 +200,24 @@ var gh = new GizmohubSDK(iframe);
         doors: {
             buttons: [true, true, true, true], // 显示车门按钮
             status: [true, true, true, true], // 开车门
-        }
+        },
+        panorama: null // 退出全景图
     })
     ```
 
 
 - `gh.on(event, callback)`监听事件。目前支持的事件有：
-  - `gizmohub:preload:progress` app 预加载进度,
+  - `gizmohub:preload:progress` app 预加载进度
   - `gizmohub:postInitialize` app 准备启动
   - `gizmohub:start` app 启动
   - `gizmohub:model:<uid>:progress` 模型加载进度，`<uid>` 替换成真实的 `uid`
   - `gizmohub:annotation:dialog` 监听注释弹窗事件，返回 bool
+  
+  // 当直接通过连接进入全景图时，会有以下事件
+  - `panorama:preload:progress` app 预加载进度
+  - `panorama:postInitialize` app 准备启动
+
+  // 注意：app启动 仍是 gizmohub:start
 
 - `gh.start()` 手动启动 app。
 
