@@ -216,7 +216,7 @@ var gh = new GizmohubSDK(iframe);
   // 当直接通过连接进入全景图时，会有以下事件
   - `panorama:preload:progress` app 预加载进度
   - `panorama:postInitialize` app 准备启动
-
+  
   // 注意：app启动 仍是 gizmohub:start
 
 - `gh.start()` 手动启动 app。
