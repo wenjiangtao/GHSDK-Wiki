@@ -4,6 +4,8 @@
 
 [编辑模型](https://gitlab.com/gizmotech/Doc/wikis/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B)
 
+[编辑模型全景图](https://gitlab.com/gizmotech/Doc/wikis/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%9E%8B%E5%85%A8%E6%99%AF%E5%9B%BE)
+
 [嵌入模型](https://gitlab.com/gizmotech/Doc/wikis/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B)
 
 [获取单个模型配置信息](https://gitlab.com/gizmotech/Doc/wikis/%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF)
