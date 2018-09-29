@@ -43,7 +43,6 @@ GET /api/v2/contents?name=奔驰&limit=20&offset=0
             "description": "asdfasdf", 
             "category": 1008
             "name": "奔驰C200L", 
-            "status": 1, 
             "thumbnail_url": "gizmohub.oss-aliyun.com/t123/m123/c123/thumbnails/addm8q4.png", 
             "uid": "46d2e56dd6293117823a34b5c1e75b81f4932ca9"
         }, 
