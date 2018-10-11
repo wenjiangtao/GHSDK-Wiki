@@ -120,7 +120,10 @@ var gh = new GizmohubSDK(iframe);
 
     {
         "moving": false,
-        "annotations": true,
+        "annotations": {
+            "items": 0, //annotation 的个数
+            "enabled": true //annotation 为开启状态
+        },
         "headlight": true,
         "size": true,
         "visible": true,
