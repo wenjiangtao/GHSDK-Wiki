@@ -58,7 +58,10 @@ var gh = new GizmohubSDK(iframe);
     gh.getState(console.log);
 
     {
-        "annotations": true,
+        "annotations": {
+            "items": 0, //annotation 的个数
+            "enabled": true //annotation 为开启状态
+        },
         "size": true,
         "explode": false,
         "visible": true,
