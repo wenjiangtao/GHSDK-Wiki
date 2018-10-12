@@ -25,8 +25,8 @@ var gh = new GizmohubSDK(iframe);
         "panorama": [
             [{ 
               "target": "xxxxxxxxxxxxx", 
-              "anchor": [true, false],
-              "annotation": [true, false],
+              "anchors": [true, false],
+              "annotations": [true, false],
             }],
             null
         ]
