@@ -23,6 +23,7 @@ var gh = new GizmohubSDK(iframe);
 
     {
         "annotations": [ true, false ],
+        "attributes": [ true, false ],
         "moving": [ true, false ],
         "headlight": [ true, false ],
         "size": [ true, false ],
@@ -87,6 +88,7 @@ var gh = new GizmohubSDK(iframe);
     ```
 
     - `annotations` 是否显示热点
+    - `attributes` 是否显示属性面板
     - `moving` 是否行使状态
     - `headlight` 是否开启车灯
     - `size` 是否显示车辆尺寸
@@ -120,6 +122,7 @@ var gh = new GizmohubSDK(iframe);
 
     {
         "moving": false,
+        "attributes": false,
         "annotations": {
             "items": 0, //annotation 的个数
             "enabled": true //annotation 为开启状态
@@ -160,6 +163,7 @@ var gh = new GizmohubSDK(iframe);
     gh.setState({
         moving: true, // 进入行使状态
         annotations: true, // 显示热点
+        attributes: true, // 显示属性面板
         headlight: true, // 显示车灯
         size: true, // 显示尺寸
         visible: true, //显示一车辆
