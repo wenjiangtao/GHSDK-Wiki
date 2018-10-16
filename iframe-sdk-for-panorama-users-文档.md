@@ -25,6 +25,7 @@ var gh = new GizmohubSDK(iframe);
         "panorama": [
             [{ 
               "target": "xxxxxxxxxxxxx", 
+              "name": "xxxxxxxxxxxxx", 
               "anchors": [true, false],
               "annotations": [true, false],
             }],
@@ -34,8 +35,9 @@ var gh = new GizmohubSDK(iframe);
     ```
     - `panorama` 可以切换全景图列表
       - `target` 全景图的uid
+      - `name` 全景图的名称
       - `anchors` 是否开启锚点
-      - `annotations` 是否开启注释`
+      - `annotations` 是否开启注释
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -45,7 +47,8 @@ var gh = new GizmohubSDK(iframe);
 
     {
         "panorama": { 
-            "target": "xxxxxxxxxxxxx", //当前全景图的uid
+            "target": "xxxxxxxxxxxxx", // 当前全景图的uid
+            "name": "xxxxxxxxxxxxx", // 当前全景图的名称
             "anchors": true, // 锚点为开启的状态
             "annotations": true, // 注释为开启的状态
           }
@@ -62,7 +65,7 @@ var gh = new GizmohubSDK(iframe);
 
     gh.setState({
         "panorama": { 
-            "target": "xxxxxxxxxxxxx", //全景图的uid
+            "target": "xxxxxxxxxxxxx", // 全景图的uid 或者 全景图的名称
             "anchors": true, // 开启锚点
             "annotations": true, // 开启注释
           }
