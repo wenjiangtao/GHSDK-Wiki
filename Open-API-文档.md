@@ -14,4 +14,6 @@
 
 [获取单个模型的所有全景图](https://gitlab.com/gizmotech/Doc/wikis/panorama)
 
+[设置车辆加减速信息](https://gitlab.com/gizmotech/Doc/wikis/%E5%8A%A0%E5%87%8F%E9%80%9F)
+
 [常见返回对象结构](https://gitlab.com/gizmotech/Doc/wikis/structs)
