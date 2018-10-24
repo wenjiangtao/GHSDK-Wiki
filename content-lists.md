@@ -1,4 +1,4 @@
-## 获取模型列表
+## 获取车辆列表
 需要带上认证信息[(如何认证)](https://gitlab.com/gizmotech/Doc/wikis/signature)
 
 ### URL
