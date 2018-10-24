@@ -1,4 +1,4 @@
-## 获取单个模型基本信息
+## 获取单个车辆基本信息
 需要带上认证信息[(如何认证)](https://gitlab.com/gizmotech/Doc/wikis/signature)
 
 ### url
