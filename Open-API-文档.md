@@ -16,4 +16,6 @@
 
 [设置车辆加减速信息](https://gitlab.com/gizmotech/Doc/wikis/%E5%8A%A0%E5%87%8F%E9%80%9F)
 
+[设置车辆属性面板](https://gitlab.com/gizmotech/Doc/wikis/%E8%AE%BE%E7%BD%AE%E8%BD%A6%E8%BE%86%E5%B1%9E%E6%80%A7%E9%9D%A2%E6%9D%BF)
+
 [常见返回对象结构](https://gitlab.com/gizmotech/Doc/wikis/structs)
