@@ -48,3 +48,9 @@ imgaes   | string |截图列表|
 uid   | string |uid |
 num   | int |张数 |
 
+### speed
+返回字段        | 字段类型 |字段说明 | 
+--------------|-----:| ----:|
+type   |int |0:time 1:distance|
+data   | object |{time,speed},{distance,speed}|
+
