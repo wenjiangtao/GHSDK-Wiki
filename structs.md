@@ -40,3 +40,11 @@ created_at| int |创建时间 |
 thumbnail_url|string|缩略图|
 description|string|描述|
 categories|int|类别，1008车，1016轮胎
+
+### screenshot
+返回字段        | 字段类型 |字段说明 | 
+--------------|-----:| ----:|
+imgaes   | string |截图列表|
+uid   | string |uid |
+num   | int |张数 |
+
