@@ -5,6 +5,8 @@
 本功能包含了加速测试和刹车测试，在单台车或两台车（对比模式）下均可使用。
 **注意：用户需要先配置加速刹车的数据，才可正常使用本功能。**
 
+
+
 ## API
 
 - `gh.getOptions(callback)`获取可选项
@@ -26,6 +28,8 @@
       - `-1` 复位，两车位置变回初识状态
       - `0` 退出
       - `1` 开始
+
+    - `speed` 设置当前速度
 
 
 - `gh.getState(callback)` 获取当前状态
@@ -57,8 +61,6 @@
         }
     });
     ```
-    
-    **注意: 在速度测试运行期间，用户不能重复设置 speeder。**
 
 
 ## Events
@@ -78,6 +80,13 @@
       - `time` 当前时间
       - `speed` 当前速度
     - 触发时机：速度测试开始到结束期间
+
+- `gizmohub:model:<uid>:speeder:distance` 模型当前运行距离
+  - 回调参数：
+    - `time` 当前时间
+    - `distance` 当前距离
+    - 触发时机：速度测试开始到结束期间
+
 
 
 ## Examples
@@ -103,6 +112,18 @@
         }
     });
     ```
+
+    - 重置速度，3秒后开始刹车：
+
+    ```js
+    gh.setState({ speeder: { action: -1, speed: 100 } });
+    setTimeout(function() {
+        gh.setState({
+            speeder: { action: 1, mode: 1 }
+        });
+    }, 3000);
+    ```
+
 
 - 退出速度测试：
 
