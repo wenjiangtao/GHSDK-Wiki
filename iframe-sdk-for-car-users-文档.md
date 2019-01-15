@@ -58,7 +58,7 @@ var gh = new GizmohubSDK(iframe);
         "exterior": [
             { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
         ],
-        "skybox": [
+        "scene": [
             { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
             { "uid": "599a8dc00af00e2ce3d1bb59fa774eda922e6675", "name": "停机坪" },
             { "uid": "4ca6583062661f40f16aad364bbc8d2699cb4933", "name": "废弃船厂" }
@@ -95,7 +95,8 @@ var gh = new GizmohubSDK(iframe);
     - `wheel` 可以切换的车胎列表, 需要传入签名信息
     - `interior` 可以切换的内饰列表
     - `exterior` 可以切换的外观列表
-    - `skybox` 可以切换的天空盒列表
+    - `scene` 可以切换的天空盒列表
+     - ~~`skybox` 可以切换的天空盒列表~~ (已弃用，用 `scene` 代替)
     - `visible` 是否显示一车辆
     - `rotate` 旋转设置
         - `enabled` 是否开启旋转
@@ -148,7 +149,7 @@ var gh = new GizmohubSDK(iframe);
         "wheel": { "uid": "d1fac90b8415a7bd1500d8e53501c032575f2e1b", "name": "默认" },
         "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "interior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
-        "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
+        "scene": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
         "doors": {
             "buttons": [false, false, false, false],
             "status": [false, false, false, false],
@@ -194,7 +195,7 @@ var gh = new GizmohubSDK(iframe);
                 "signature": "string"
             }
         }
-        skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
+        scene: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
         interior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换内饰的uid
         exterior: { "uid": "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
         doors: {
