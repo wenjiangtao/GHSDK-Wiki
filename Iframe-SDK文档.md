@@ -44,7 +44,7 @@ var gh = new GizmohubSDK(iframe);
     - `annotations` 是否显示热点
     - `explode` 是否进行模型拆解
     - `size` 是否显示模型尺寸
-    - `material_sets` 可以切换的外观列表
+    - `exterior` 可以切换的外观列表
     - `skybox` 可以切换的天空盒列表
     - `visible` 是否显示模型
     - `rotate` 旋转设置
