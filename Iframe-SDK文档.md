@@ -30,7 +30,7 @@ var gh = new GizmohubSDK(iframe);
             "enabled": [ true, false ],
             "speed": "number"
         },
-        "material_sets": [
+        "exterior": [
             { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" }
         ],
         "skybox": [
@@ -69,7 +69,7 @@ var gh = new GizmohubSDK(iframe);
             "enabled": false,
             "speed": 4
         },
-        "material_sets": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
+        "exterior": { "uid": "399c7545bf2cef73c193c805a5f34842652b832a", "name": "默认" },
         "skybox": { "uid": "0433a2c6c19a9198c6fa16be3a9f30a27a1b5bc8", "name": "展厅" },
     }
     ```
@@ -88,7 +88,7 @@ var gh = new GizmohubSDK(iframe);
             speed: 4 // 旋转速度为4
         },
         skybox: { uid: "4ca6583062661f40f16aad364bbc8d2699cb4933" }, // 切换天空盒
-        material_sets: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
+        exterior: { uid: "399c7545bf2cef73c193c805a5f34842652b832a" }, // 更换外观的uid
     })
     ```
 
